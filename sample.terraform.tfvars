@@ -1,6 +1,6 @@
 digitalocean_token = ""
 
-region = "NYC2"
+region = "nyc3"
 
 master_size = "4GB"
 
