@@ -38,5 +38,7 @@ until \$(curl -m 2 --connect-timeout 2 --output /dev/null --silent --head --fail
 done           
 curl -O http://$BOOTSTRAP:4040/dcos_install.sh
 sudo bash dcos_install.sh \$1
+sudo sed -i.bak 's/^127.0.0.1/127.0.0.1  '$(hostname -f)' /g' /etc/hosts
 FIN
 rm -rf ./ips.txt
+
